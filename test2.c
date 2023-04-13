@@ -8,7 +8,6 @@
     int i;
     double dx, x, y;
 
-     /*------ データファイル作成 ---------- */
     data_file="out.dat";  //変数に文字リテラルを代入するときはポインタ変数に代入する。
     data = fopen(data_file,"w"); //wは書き込み専用で開く
     
@@ -19,7 +18,8 @@
         fprintf(data,"%f\t%f\n", x, y);
     }
     fclose(data); 
-    /*------ グラフの作成 ---------- */  
+
+
     gp = popen("gnuplot -persist","w");
     fprintf(gp, "set xrange [-6.5:6.5]\n");
     fprintf(gp, "set yrange [-1.5:1.5]\n");
