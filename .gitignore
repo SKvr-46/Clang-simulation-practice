@@ -2,3 +2,4 @@
 *.vscode
 *.dSYM
 *.dat
+.DS_Store
