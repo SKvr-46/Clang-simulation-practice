@@ -1,3 +1,4 @@
+//精度は低いが直感的。
 #include <stdio.h>
 
 double f(double x, double y) {

@@ -1,3 +1,4 @@
+//精度は高い
 #include <stdio.h>
 
 double f(double x, double y) {
