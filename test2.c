@@ -1,3 +1,5 @@
+//別ファイルに書き込んで出力する
+
 #include <stdio.h>
 #include <math.h>
 #define NX 720
