@@ -20,7 +20,7 @@ int main(void){
     fprintf(gp, "plot '-' with lines linetype 1 title \"sin\"\n");
 
     for(i=0; i<=NX; i++){
-       fprintf(gp,"%f\t%f\n", x[i], y[i]);  
+        fprintf(gp,"%f\t%f\n", x[i], y[i]);  
 
     }  
     fprintf(gp,"e\n");
