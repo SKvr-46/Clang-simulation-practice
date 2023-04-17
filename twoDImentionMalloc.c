@@ -11,7 +11,7 @@ int main() {
     char *data_file;
 
     double ***u;                // 3次元配列 u をポインタで宣言
-    double c = 3.0 * pow(10,8);  // 波の速度
+    double c = 3.0;             // 波の速度
     double dx = 0.1;             // x軸方向のグリッド幅
     double dy = 0.1;             // y軸方向のグリッド幅
     double dt = 0.1;             // 時間ステップ幅
@@ -33,11 +33,7 @@ int main() {
     for (i = 0; i < NX; i++) {
         for (j = 0; j < NY; j++) {
             for (k = 0; k < NT; k++) {
-                // u[i][j][k] = 0;
-                double x = (i - NX/2)*dx;
-                double y = (j - NY/2)*dy;
-                double z = (k - NT/2)*dt;
-                u[i][j][k] = exp(-0.1*(x*x + y*y + z*z));
+                u[i][j][k] = 0;
             }
         }
     }
@@ -67,7 +63,7 @@ int main() {
     gp = popen("gnuplot -persist","w");
     fprintf(gp, "set xrange [0:10]\n");
     fprintf(gp, "set yrange [0:10]\n");
-    fprintf(gp, "plot \"%s\" with lines linetype 1 title \"sin\"\n",data_file);
+    fprintf(gp, "splot \"%s\" with lines linetype 1 title \"sin\"\n",data_file);
     pclose(gp);
 
 
