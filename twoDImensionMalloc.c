@@ -67,6 +67,7 @@ int main() {
     pclose(gp);
 
 
+
     // 3次元配列 u を解放する
     for (i = 0; i < NX; i++) {
         for (j = 0; j < NY; j++) {
