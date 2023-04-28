@@ -63,6 +63,7 @@ int main() {
     gp = popen("gnuplot -persist","w");
     fprintf(gp, "set xrange [0:10]\n");
     fprintf(gp, "set yrange [0:10]\n");
+    fprintf(gp, "set zrange [-10:10]\n");
     fprintf(gp, "splot \"%s\" with lines linetype 1 title \"sin\"\n",data_file);
     pclose(gp);
 

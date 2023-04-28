@@ -55,7 +55,6 @@ int main() {
     }
 
     // 結果の出力
-    // FILE* fp = fopen("wave.dat", "w");
     data_file="wave3.dat";  //変数に文字リテラルを代入するときはポインタ変数に代入する。
     data = fopen(data_file,"w"); //wは書き込み専用で開く
 
